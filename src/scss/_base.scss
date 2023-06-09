@@ -1,0 +1,90 @@
+body {
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.logo-size{
+    height: 24px;
+    width: 147px;
+    @include media-breakpoint-up(md) {
+        height: 40px;
+        width: 245px;
+    }
+}
+
+.material-symbols-sharp, .material-symbols-outlined{
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+
+.position-md-absolute {
+    @include media-breakpoint-up(md) {
+        position: absolute !important;
+    }
+}
+
+.translate-md-middle {
+    @include media-breakpoint-up(md) {
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+
+.rounded-bg {
+    border-radius: 160px;
+}
+
+@media (max-width:768px) {
+    .rounded-bg {
+        border-radius: 90px;
+    }
+}
+
+@media (max-width:391px){
+    .rounded-bg {
+            border-radius: 16px;
+        }
+}
+
+.pgsize{
+    width: 48px;
+    height: 48px;
+}
+
+.h-40px {
+    height: 40px;
+}
+
+//參考同學
+.Logos { 
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(270deg, rgba(2, 2, 2, 0) 0%, rgb(2, 2, 2) 100%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: linear-gradient(90deg, rgba(2, 2, 2, 0) 0%, rgba(2, 2, 2, 1) 100%);
+    }
+}
+
+.card img {
+    display: block;
+    transform: scale(1, 1);
+    transition: all 0.3s ease-out;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+}
